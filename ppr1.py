@@ -1,6 +1,6 @@
 # trace generated using paraview version 5.7.0-RC1
 #
-# To ensure correct image size when batch processing, please search 
+# To ensure correct image size when batch processing, please search
 # for and uncomment the line `# renderView*.ViewSize = [*,*]`
 
 #### import the simple module from the paraview
@@ -63,9 +63,6 @@ materialLibrary1 = GetMaterialLibrary()
 # show color bar/color legend
 brainpvdDisplay.SetScalarBarVisibility(renderView1, True)
 
-# update the view to ensure updated data information
-renderView1.Update()
-
 # Properties modified on renderView1
 renderView1.Background = [1.0, 1.0, 1.0]
 
@@ -79,73 +76,38 @@ partIDLUTColorBar.LabelColor = [0.0, 0.0, 0.0]
 partIDLUTColorBar.LabelFontSize = 40
 partIDLUTColorBar.ScalarBarLength = 0.4
 
-# reset view to fit data
-renderView1.ResetCamera()
+# Properties modified on renderView1
+# black Background
+#renderView1.Background = [0.0, 0.0, 0.0]
 
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
-
-# reset view to fit data
-renderView1.ResetCamera()
+# Properties modified on renderView1
+# white Background
+renderView1.Background = [1.0, 1.0, 1.0]
 
 # create a new 'Annotate Time'
 annotateTime1 = AnnotateTime()
 
-# Properties modified on renderView1
-renderView1.Background = [0.0, 0.0, 0.0]
-
-# Properties modified on renderView1
-renderView1.Background = [1.0, 1.0, 1.0]
-
 # show data in view
 annotateTime1Display = Show(annotateTime1, renderView1)
 
-# update the view to ensure updated data information
-renderView1.Update()
-
 # Properties modified on annotateTime1Display
+# time annotation black text
 annotateTime1Display.Color = [0.0, 0.0, 0.0]
 
 #### saving camera placements for all active views
 
 # current camera placement for renderView1
-renderView1.CameraPosition = [-0.0014352765121285395, -0.4146354471208583, -0.4538263739604208]
-renderView1.CameraFocalPoint = [1.3331155070650526e-19, -0.36230199999999996, -0.027604999999999998]
-renderView1.CameraViewUp = [-0.017772270767304508, -0.9923821366241045, 0.12190915183508973]
-renderView1.CameraParallelScale = 0.11114327161821357
+renderView1.CameraPosition = [0, -.362302, -0.45703]
+renderView1.CameraFocalPoint = [0, -.362302, -0.027605]
+renderView1.CameraViewUp = [0, -1, 0]
+#renderView1.CameraParallelScale = 0.11114327161821357
+
+# update the view to ensure updated data information
+renderView1.Update()
 
 #### uncomment the following to render all views
-# RenderAllViews()
+RenderAllViews()
 # alternatively, if you want to write images, you can use SaveScreenshot(...).
-
-Render()
 
 #save screenshot
 WriteImage("test.png")

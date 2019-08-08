@@ -71,9 +71,9 @@ partIDLUTColorBar = GetScalarBar(partIDLUT, renderView1)
 
 # Properties modified on partIDLUTColorBar
 partIDLUTColorBar.TitleColor = [0.0, 0.0, 0.0]
-partIDLUTColorBar.TitleFontSize = 40
+partIDLUTColorBar.TitleFontSize = 4
 partIDLUTColorBar.LabelColor = [0.0, 0.0, 0.0]
-partIDLUTColorBar.LabelFontSize = 40
+partIDLUTColorBar.LabelFontSize = 4
 partIDLUTColorBar.ScalarBarLength = 0.4
 
 # Properties modified on renderView1
@@ -110,4 +110,5 @@ RenderAllViews()
 # alternatively, if you want to write images, you can use SaveScreenshot(...).
 
 #save screenshot
-WriteImage("test.png")
+#WriteImage("test.png")
+SaveScreenshot('test.png', renderView1, ImageResolution=[2277, 1440],TransparentBackground=1)

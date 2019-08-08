@@ -9,7 +9,7 @@ from paraview.simple import *
 paraview.simple._DisableFirstRenderCameraReset()
 
 # create a new 'PVD Reader'
-brainpvd = PVDReader(FileName='C:\\Users\\rhk12\\Documents\\GitHub\\FemTech\\build\\examples\\ex5\\brain.pvd')
+brainpvd = PVDReader(FileName='brain.pvd')
 brainpvd.CellArrays = ['PartID', 'AvgStrain', 'ProcID']
 brainpvd.PointArrays = ['Displacements', 'Accelerations', 'Boundary']
 
@@ -144,3 +144,8 @@ renderView1.CameraParallelScale = 0.11114327161821357
 #### uncomment the following to render all views
 # RenderAllViews()
 # alternatively, if you want to write images, you can use SaveScreenshot(...).
+
+Render()
+
+#save screenshot
+WriteImage("test.png")

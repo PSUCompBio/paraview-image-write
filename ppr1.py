@@ -111,4 +111,4 @@ RenderAllViews()
 
 #save screenshot
 #WriteImage("test.png")
-SaveScreenshot('test.png', renderView1, ImageResolution=[2277, 1440],TransparentBackground=1)
+SaveScreenshot(sys.argv[1], renderView1, ImageResolution=[2277, 1440],TransparentBackground=1)

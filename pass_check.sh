@@ -3,7 +3,7 @@
 # Add file and the target file size below
 repo=paraview-image-write
 file=test.png
-target_file_size=332235
+target_file_size=53295
 
 # You shoud not have to modify below
 #
